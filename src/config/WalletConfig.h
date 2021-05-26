@@ -1,4 +1,5 @@
 // Copyright (c) 2018, The TurtleCoin Developers
+// Copyright (c) 2021, The Kryptobam Developers
 //
 // Please see the included LICENSE file for more information.
 
@@ -10,10 +11,10 @@
 namespace WalletConfig
 {
     /* The prefix your coins address starts with */
-    const std::string_view addressPrefix = "SEKR";
+    const std::string_view addressPrefix = "TBM";
 
     /* Your coins 'Ticker', e.g. Monero = XMR, Bitcoin = BTC */
-    const std::string ticker = "XKR";
+    const std::string ticker = "TBM";
 
     /* The filename to output the CSV to in save_csv */
     const std::string csvFilename = "transactions.csv";
@@ -23,7 +24,7 @@ namespace WalletConfig
     const std::string addressBookFilename = ".addressBook.json";
 
     /* The name of your deamon */
-    const std::string daemonName = "kryptokronad";
+    const std::string daemonName = "kryptobamd";
 
     /* The name to call this wallet */
     const std::string walletName = "xkrwallet";
@@ -36,7 +37,7 @@ namespace WalletConfig
     const std::string coinName = std::string(CryptoNote::CRYPTONOTE_NAME);
 
     /* Where can your users contact you for support? E.g. discord */
-    const std::string contactLink = "http://chat.kryptokrona.se";
+    const std::string contactLink = "http://chat.kryptobam.io";
 
 
     /* The number of decimals your coin has */
