@@ -1,6 +1,7 @@
 // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2018-2019, The TurtleCoin Developers
+// Copyright (c) 2021, The Kryptobam Developers
 //
 // Please see the included LICENSE file for more information.
 
@@ -21,7 +22,7 @@ const uint64_t DIFFICULTY_TARGET                             = 90; // seconds
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 2239254;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x419c; // TBM
 const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 20;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3         = 3 * DIFFICULTY_TARGET;
@@ -68,7 +69,7 @@ TurtleCoind --print-genesis-tx --genesis-block-reward-address TRTLv2Fyavy8CXG8BP
 * You should see your premine appear in the previously generated wallet.
 
 */
-const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff000188f3b501029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210142694232c5b04151d9e4c27d31ec7a68ea568b19488cfcb422659a07a0e44dd5";
+const char     GENESIS_COINBASE_TX_HEX[] = "011401ff000183b1de1602610f2ca283be09725bb876e07636f67427b48370bbee17708445cab8f762eecc2101721d8b0d6d7933a4086d409718bc9dd0987ad78c4dd6275cb85faec81bfbb9f2";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
@@ -202,7 +203,7 @@ const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "kryptokrona";
+const char     CRYPTONOTE_NAME[]                             = "kryptobam";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;
@@ -257,16 +258,16 @@ const uint64_t DATABASE_READ_BUFFER_MB_DEFAULT_SIZE          = 10;
 const uint32_t DATABASE_DEFAULT_MAX_OPEN_FILES               = 100;
 const uint16_t DATABASE_DEFAULT_BACKGROUND_THREADS_COUNT     = 2;
 
-const char     LATEST_VERSION_URL[]                          = "https://github.com/kryptokrona/kryptokrona";
-const std::string LICENSE_URL                                = "https://github.com/kryptokrona/kryptokrona/blob/master/LICENSE";
+const char     LATEST_VERSION_URL[]                          = "https://github.com/NimraPro/kryptobam";
+const std::string LICENSE_URL                                = "https://github.com/NimraPro/kryptobam/blob/master/LICENSE";
 const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {
-    {  0xf1, 0x4b, 0xb8, 0xc8, 0xb2, 0x56, 0x45, 0x2e, 0xee, 0xf0, 0xb4, 0x99, 0xab, 0x71, 0x6c, 0xcc  }
+    {  0xf2, 0x4a, 0xb6, 0xc6, 0xb4, 0x58, 0x47, 0x2c, 0xcc, 0xb0, 0xf4, 0x79, 0xcc, 0x73, 0x6a, 0xca  }
 };
 
 const char* const SEED_NODES[] = {
-  "68.183.214.93:11897",//pool1
-  "5.9.250.93:11897"//techy
+  "45.61.138.168:11897",//pool1
+  "109.175.38.40:11897"//techy
 
 };
 } // CryptoNote
